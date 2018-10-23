@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <title> squares and cubes</title>
+    <!-- Hacemos referencia a boostrap y las fuentes de letras -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+
+    <style>
+        /*comenzamos el CSS*/
+        body {
+            background-image: url(fondo_pantalla1.jpg.jpg);
+             
+        }
+        /*---------------TABLE-----------------------------------------*/
+      
+            .table{/* Afecta a las tablas de html*/
+            
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            border-collapse:separate ;
+            padding: 28px; 
+             line-height: 1.2em;
+                
+            
+        }
+        
+        
+       
+          
+        th{
+            
+    padding:14px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+    
+
+        
+        td {
+        color: white;
+    font-size:36px;
+    text-align:center;
+    padding:13px 0px;
+    text-shadow:3px 3px 3px #444;
+    padding-right: 50px;
+        }
+       
+        
+   
+        h1{
+        text-decoration: none;
+            color: white;
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+       
+        p{
+            margin-top: 80px;
+            text-align: center;
+        
+        }
+    
+  /*---------------------------------------FOOTER 1------------------------------------------*/
+    .footer1, .footer { /*Al ser clases ponemos el punto antes del nombre de la clase para hacer referencia en el CSS*/
+            margin:50px;
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Chakra Petch', sans-serif;
+ }
+      
+.footer2 a {
+    color: #DDD;
+    padding-right: 150px;
+}
+
+.footer1 a:hover,/*Aqui vamos div por div aplicando el CSS deseado para el footer*/
+.footer1 a:focus,
+.footer1 a:active {
+    color: skyblue;
+}
+
+.footer1 .footer {
+    background-color: #2E3436;
+    padding: 35px 0;
+    margin-top: 5em;
+}
+
+.footer1 .footer .footer-desc p {
+    color: #DDD;
+	margin: 15px 30px 15px;
+    padding-left: 170px;
+}
+
+.footer1 .footer .input-group {
+    margin: 15px 0;
+}
+
+.footer1 .footer .form-control {
+    border-radius: 2px 0 0 2px;
+    background-color: #585C5D;
+    border-color: #585C5D;
+    color: skyblue;
+    font-size: 15px;
+}
+
+.footer1 .footer .form-control:hover,
+.footer1 .footer .form-control:focus {
+    border: 1px solid #222728;
+    background-color: #222728;
+}
+
+.footer1 .footer .input-group-addon {
+    border-radius: 2px 2px 2px 2px;
+    background-color: #F7931D;
+    color: #FFF;
+    border-color: #F7931D;
+    font-size: 15px;
+    padding-top: 6px;
+}
+
+.footer1 .footer-bottom {
+    background-color: #222728;
+    padding: 15px 0;
+    color: #DDD;
+    font-size: 13px;
+}
+.footer1 .leer{
+            
+            font-size:15px;
+            
+        }
+
+    </style>
+</head>
+
+
+<body onload="Tabla()">  <!-- Para que llame a la funcion tabla()   -->
+    <h1>BUCLES</h1>
+   
+    <div class="container center-text"> <!-- Esta clase de boostrap en este caso nos centra la tabla en la pagina -->
+        <table class="table table-responsive"><!-- hace la tabla responsive -->
+            <tr id="number"><!-- Tabla -->
+                <td>Numbers</td>
+            </tr>
+            <tr id="square">
+                <td>squares</td>
+            </tr>
+            <tr id="cube">
+                <td>Cubes</td>
+            </tr>
+            
+        </table>
+
+    </div>
+   
+    <script src="tables.js"></script> <!-- Especificamos donde y cual es el archivo js que queremos vincular al HTML -->
+
+<footer class="footer1"><!-- Comienza el footer de la página  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="footer-desc text-center"><!-- Se centra en la mitad de la página -->
+                        <img src="logo.png" width="250" height="55" alt="mi logo"><!-- Insertamos la imagen de mi perfil "Ángel Huete Abad" -->
+                        <p>
+                            <a href="https://github.com/angelhueteabad" rel="home">Sigueme en GitHub para mas códigos como este!</a> <a class="leer" href="https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/">leer más</a> <!-- Primer Link redirige a mi página de Github, segundo link explicación de qué es github  -->
+                        </p>
+                    </div>
+                </div>
+
+                <nav class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <div class="input-group input-group-md">
+                      <input type="text" class="form-control" placeholder="Email Address"><!-- Establecemos el input donde se introduce el email del usuario que quiere subscribirse y asi recibir las ultimas noticias del perfil -->
+                      <input type="submit" class="input-group-addon" onclick="subscribe()" value="Subscribete!"><!-- Boton subscribir -->
+                    </div>
+                </nav>
+            </div> <!--/.row--> 
+        </div> <!--/.container--> 
+    </div> <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="pull-left"> Copyright © <a href="https://liooil.space/">Ángel Huete Abad</a>. Todos los derechos reservados.</div><!--  Link rededirige a un Easter Egg de la página -->
+        </div>
+    </div> <!--/.footer-bottom--> 
+</footer>
+</body>
+</html>

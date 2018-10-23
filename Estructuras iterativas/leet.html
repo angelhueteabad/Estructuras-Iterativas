@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+ Prácticas con estructuras de control Iterativas (bucles)
+ 
+ leet 1337
+-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Ángel Huete Abad" />
+
+  <title>Transformación de texto a 1337</title>
+  <style>
+    #input {
+	color: black;
+	font-size: 1.7em;
+    }
+    #salida, #comprueba {
+	      border: 5px solid #000099;
+	      padding: 10px 40px; 
+	      width: 50%;
+	      border-radius: 50px;
+ 	      font-size: 1.5em;
+              word-wrap: break-word;
+              display: none;
+    }
+    #comprueba {
+	color: green;
+        background: #FFFFCC;
+	border-style:none;
+    }
+  </style>
+  <script>
+      
+      /*Letras a modificar:
+A  B  C  D  E  G  H  I  L  O  S  T  Z
+=====================================
+4  8  (  )  3  6  #  !  1  0  5  7  2
+*/
+        var ln = {/* ARRAY que guarda las conversiones*/
+                A: "4",
+                B: "8",
+                C: "(",
+                D: ")",
+                E: "3",
+                G: "6",
+                H: "#",
+                I: "!",
+                L: "1",
+                O: "0",
+                S: "5",
+                T: "7",
+                Z: "2"
+            };
+      
+    function leet() {
+      var entrada = document.getElementById("input").value; 
+      var salida = "";  // Para construir el texto en 1337  
+      document.getElementById("comprueba").innerHTML = L337(entrada);  // Mostrar el texto en 1337 
+      entrada = entrada.toUpperCase();  
+     
+        // Bucle para recorrer la cadena de caracteres (string) de entrada e ir construyendo la cadena de salida según la transformación 1337
+        for (i = 0; i < entrada.length; i++) { 
+            /*SI cumple la condicion al comparar la letras del array entrara en el bucle*/
+                if (ln[entrada[i]]) { 
+                    salida += ln[entrada[i]]; /*a esta variable se le van  agregando letras a causa del array*/
+                } else {         /*en el caso de que no se cumpla las condiciones se escribe la cadena tal cual*/
+                    salida += entrada[i]; 
+                }
+            }
+        
+      document.getElementById("salida").innerHTML = salida;  // Mostrar el texto en 1337 
+
+      // Hacer visibles los div salida y comprueba
+      document.getElementById("salida").style.display = 'block';
+        
+      document.getElementById("comprueba").style.display = 'block';
+    }
+   // ATENCION!! Esta función No  pasa a mayúculas la ñ ni las vocales acentuadas!!
+      
+   function L337(str) { return str.replace(/[a-z,A-Z]/g,function f(a){return "48()3F6#!JK1MN0PQR57UVWXY2"[parseInt(a, 36)-10] || a.replace(/[a-z]/gi,f)}); }
+  </script>
+</head>
+<body>
+  <h1>Convertir texto a 1337</h1>
+  <textarea id="input" rows="4" cols="50" placeholder="Introduzca su texto aquí" required autofocus></textarea>
+  <button type="button" onclick="leet()">Convertir a 1337</button>
+  <div id="salida"></div>
+  <p></p>
+  <div id="comprueba"></div>
+  </body>
+</html>
